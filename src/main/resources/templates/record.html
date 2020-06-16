@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="ko">
+	<title>RECORDING</title>
+</head>
+<body>
+	<h2>Recording System</h2>
+	
+	<form th:object="${record}" method="post" th:action="@{/list}">
+		<label>서비스키</label>
+		<input type="text" th:field="*{svc_key}"/>
+		<label>파일</label>
+		<input type="file" th:field="*{file}">	
+		<button type="submit">submit</button>
+	</form>
+</body>
+</html>
